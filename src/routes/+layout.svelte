@@ -1,6 +1,6 @@
 <script lang="ts">
   // The ordering of these imports is critical to your app working properly
-  import "@skeletonlabs/skeleton/themes/theme-gold-nouveau.css";
+  import "../theme.css";
   // If you have source.organizeImports set to true in VSCode, then it will auto change this ordering
   import "@skeletonlabs/skeleton/styles/all.css";
   // Most of your app wide CSS should be put in this file
@@ -12,7 +12,7 @@
 <AppShell>
   <svelte:fragment slot="header">
     <!-- App Bar -->
-    <AppBar>
+    <AppBar background="bg-secondary-800">
       <svelte:fragment slot="lead">
         <a href="/" class="text-xl uppercase">RFS Sports Meet</a>
       </svelte:fragment>

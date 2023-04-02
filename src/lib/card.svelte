@@ -23,7 +23,7 @@
 </script>
 
 <div
-  class="bg-tertiary-400/20 rounded-xl overflow-hidden md:h-80 h-4/6 my-6 flex md:flex-row flex-col w-3/4 mx-auto"
+  class="bg-success-500/30 rounded-xl overflow-hidden md:h-80 h-4/6 my-6 flex md:flex-row flex-col w-3/4 mx-auto"
 >
   <div
     style="background-image: url({enhanced_and_compressed})"
@@ -32,25 +32,25 @@
   <div
     class="flex flex-col gap-2 md:w-1/2 w-full md:h-full h-1/2 items-center justify-center"
   >
-    <a target="_blank" href={original} class="btn w-3/4 variant-filled-surface"
+    <a target="_blank" href={original} class="btn w-3/4 variant-filled-primary"
       >Original</a
     >
-    <a target="_blank" href={enhanced} class="btn w-3/4 variant-filled-surface"
+    <a target="_blank" href={enhanced} class="btn w-3/4 variant-filled-primary"
       >Enhanced</a
     >
     <a
       target="_blank"
       href={enhanced_and_compressed}
-      class="btn w-3/4 variant-filled-surface">Enhanced and Compressed</a
+      class="btn w-3/4 variant-filled-primary">Enhanced and Compressed</a
     >
     <a
       target="_blank"
       href={compressed}
-      class="btn w-3/4 variant-filled-surface">Compressed</a
+      class="btn w-3/4 variant-filled-primary">Compressed</a
     >
     <button
       on:click={() => deletePhoto(name)}
-      class="btn w-3/4 variant-ghost-error">Delete</button
+      class="btn w-3/4 variant-filled-error">Delete</button
     >
   </div>
 </div>
