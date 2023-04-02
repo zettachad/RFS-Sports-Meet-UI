@@ -12,7 +12,13 @@
   function deletePhoto(name: string) {
     fetch(`https://api.rfs-sports.kush.in/delete?name=${name}`, {
       method: "DELETE",
-    });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        alert(data.message);
+        window.location.reload();
+      })
+      .catch((err) => alert(err.message));
   }
 </script>
 
@@ -35,6 +41,10 @@
     >
     <a target="_blank" href={compressed} class="btn variant-filled-surface w-64"
       >Compressed</a
+    >
+    <button
+      on:click={() => deletePhoto(name)}
+      class="btn variant-ghost-error w-64">Delete</button
     >
   </div>
 </div>
