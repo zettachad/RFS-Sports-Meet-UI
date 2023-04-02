@@ -28,7 +28,12 @@
         >
       </svelte:fragment>
       <svelte:fragment slot="trail">
-        <a href="/view" class="btn variant-ghost-surface"> View </a>
+        <a
+          href="/view"
+          class="btn variant-ringed-primary hover:variant-filled-primary"
+        >
+          View
+        </a>
       </svelte:fragment>
     </AppBar>
   </svelte:fragment>
