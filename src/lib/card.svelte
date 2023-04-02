@@ -22,39 +22,45 @@
   }
 </script>
 
-<div class="flex flex-row w-full h-full">
+<div
+  class="bg-tertiary-400/20 rounded-xl overflow-hidden md:h-80 h-4/6 my-6 flex md:flex-row flex-col w-3/4 mx-auto"
+>
   <div
     style="background-image: url({enhanced_and_compressed})"
-    class="image w-1/2 h-full"
+    class="image md:w-1/2 w-full md:h-full h-1/2"
   />
-  <div class="flex flex-col gap-4 w-1/2 h-full items-center justify-center">
-    <a target="_blank" href={original} class="btn variant-filled-surface w-64"
+  <div
+    class="flex flex-col gap-2 md:w-1/2 w-full md:h-full h-1/2 items-center justify-center"
+  >
+    <a target="_blank" href={original} class="btn w-3/4 variant-filled-surface"
       >Original</a
     >
-    <a target="_blank" href={enhanced} class="btn variant-filled-surface w-64"
+    <a target="_blank" href={enhanced} class="btn w-3/4 variant-filled-surface"
       >Enhanced</a
     >
     <a
       target="_blank"
       href={enhanced_and_compressed}
-      class="btn variant-filled-surface w-64">Enhanced and Compressed</a
+      class="btn w-3/4 variant-filled-surface">Enhanced and Compressed</a
     >
-    <a target="_blank" href={compressed} class="btn variant-filled-surface w-64"
-      >Compressed</a
+    <a
+      target="_blank"
+      href={compressed}
+      class="btn w-3/4 variant-filled-surface">Compressed</a
     >
     <button
       on:click={() => deletePhoto(name)}
-      class="btn variant-ghost-error w-64">Delete</button
+      class="btn w-3/4 variant-ghost-error">Delete</button
     >
   </div>
 </div>
 
 <style lang="postcss">
   .image {
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
