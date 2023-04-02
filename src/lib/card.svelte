@@ -27,30 +27,36 @@
 >
   <div
     style="background-image: url({enhanced_and_compressed})"
-    class="image md:w-1/2 w-full md:h-full h-1/2"
+    class="image md:w-3/4 w-full md:h-full h-1/2"
   />
   <div
-    class="flex flex-col gap-2 md:w-1/2 w-full md:h-full h-1/2 items-center justify-center"
+    class="flex flex-col md:w-1/2 w-full md:h-full h-1/2 items-center justify-center"
   >
-    <a target="_blank" href={original} class="btn w-3/4 variant-filled-primary"
-      >Original</a
+    <a
+      target="_blank"
+      href={original}
+      class="btn w-full rounded-none h-full variant-filled-primary">Original</a
     >
-    <a target="_blank" href={enhanced} class="btn w-3/4 variant-filled-primary"
-      >Enhanced</a
+    <a
+      target="_blank"
+      href={enhanced}
+      class="btn w-full rounded-none h-full variant-filled-primary">Enhanced</a
     >
     <a
       target="_blank"
       href={enhanced_and_compressed}
-      class="btn w-3/4 variant-filled-primary">Enhanced and Compressed</a
+      class="btn w-full rounded-none h-full variant-filled-primary"
+      >Enhanced and Compressed</a
     >
     <a
       target="_blank"
       href={compressed}
-      class="btn w-3/4 variant-filled-primary">Compressed</a
+      class="btn w-full rounded-none h-full variant-filled-primary"
+      >Compressed</a
     >
     <button
       on:click={() => deletePhoto(name)}
-      class="btn w-3/4 variant-filled-error">Delete</button
+      class="btn w-full rounded-none h-full variant-filled-error">Delete</button
     >
   </div>
 </div>
