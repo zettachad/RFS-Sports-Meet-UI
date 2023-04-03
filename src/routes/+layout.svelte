@@ -29,10 +29,21 @@
       </svelte:fragment>
       <svelte:fragment slot="trail">
         <a
-          href="/view"
+          href="/tech"
           class="btn variant-ringed-primary hover:variant-filled-primary"
         >
-          View
+          Tech Team Catalogue
+        </a>
+        <a
+          href="/caption"
+          class="btn variant-ringed-primary hover:variant-filled-primary"
+        >
+          Text Team Catalogue
+        </a><a
+          href="/output"
+          class="btn variant-ringed-primary hover:variant-filled-primary"
+        >
+          Output
         </a>
       </svelte:fragment>
     </AppBar>

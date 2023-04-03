@@ -1,6 +1,6 @@
 <script lang="ts">
   import { FileDropzone } from "@skeletonlabs/skeleton";
-  let files: FileList;
+  import { api } from "$lib/info";
   $: name = "Upload a file or drag and drop";
   function onChangeHandler(e: Event): void {
     name = (e.target as HTMLInputElement)?.files?.item(0)?.name ?? name;
@@ -8,7 +8,7 @@
   function handleSubmit(e: SubmitEvent): void {
     if (!e.target) return;
     const formData = new FormData(e.target as HTMLFormElement);
-    fetch("https://api.rfs-sports.kush.in/upload", {
+    fetch(api + "upload", {
       method: "POST",
       body: formData,
     })
