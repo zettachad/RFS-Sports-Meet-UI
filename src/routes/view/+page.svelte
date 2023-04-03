@@ -3,6 +3,7 @@
   import Card from "$lib/card.svelte";
   interface photo {
     name: string;
+    event: string;
     original: string;
     compressed: string;
     enhanced: string;

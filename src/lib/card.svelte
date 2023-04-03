@@ -1,14 +1,21 @@
 <script lang="ts">
   interface Photo {
     name: string;
+    event: string;
     original: string;
     compressed: string;
     enhanced: string;
     enhanced_and_compressed: string;
   }
   export let photo: Photo;
-  const { name, original, compressed, enhanced, enhanced_and_compressed } =
-    photo;
+  const {
+    name,
+    event,
+    original,
+    compressed,
+    enhanced,
+    enhanced_and_compressed,
+  } = photo;
   function deletePhoto(name: string) {
     fetch(`https://api.rfs-sports.kush.in/delete?name=${name}`, {
       method: "DELETE",
@@ -32,6 +39,7 @@
   <div
     class="flex flex-col md:w-1/2 w-full md:h-full h-1/2 items-center justify-center"
   >
+    <p class="btn w-full rounded-none h-full">{event}</p>
     <a
       target="_blank"
       href={original}

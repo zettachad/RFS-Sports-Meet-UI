@@ -46,6 +46,15 @@
         </svelte:fragment>
         <svelte:fragment slot="meta">PNG and JPG allowed</svelte:fragment>
       </FileDropzone>
+      <label class="label my-4">
+        <span>Event</span>
+        <input
+          name="event"
+          class="input"
+          type="text"
+          placeholder="Name of the event"
+        />
+      </label>
       <input
         class="btn variant-filled-primary cursor-pointer text-2xl"
         type="submit"
